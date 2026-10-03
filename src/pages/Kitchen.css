@@ -1,0 +1,991 @@
+/* =========================================================
+   SMART RESTAURANT
+   KITCHEN DISPLAY SYSTEM
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.kitchen-page {
+  min-height: calc(100vh - 80px);
+
+  padding: 42px 38px 60px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #faf8f4 0%,
+      #f5f1eb 100%
+    );
+
+  color: #292522;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.kitchen-header {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto 34px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.kitchen-heading {
+  min-width: 0;
+}
+
+.kitchen-label {
+  margin: 0 0 9px;
+
+  color: #9a8b7b;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.kitchen-header h1 {
+  margin: 0;
+
+  color: #25211e;
+
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 800;
+
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.kitchen-subtitle {
+  margin: 10px 0 0;
+
+  color: #8b8580;
+
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.kitchen-live {
+  min-width: 82px;
+
+  padding: 11px 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: #ffffff;
+
+  border: 1px solid #e8e1d8;
+  border-radius: 999px;
+
+  color: #43875f;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  box-shadow:
+    0 5px 18px rgba(58, 44, 30, 0.06);
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+
+  display: inline-block;
+
+  background: #43a86a;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 4px rgba(67, 168, 106, 0.13);
+
+  animation: livePulse 1.8s infinite;
+}
+
+@keyframes livePulse {
+  0% {
+    box-shadow:
+      0 0 0 3px rgba(67, 168, 106, 0.16);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 7px rgba(67, 168, 106, 0.05);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 3px rgba(67, 168, 106, 0.16);
+  }
+}
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.kitchen-error {
+  max-width: 1500px;
+
+  margin: 0 auto 24px;
+
+  padding: 14px 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #fff4f2;
+
+  border: 1px solid #f0cbc4;
+  border-radius: 12px;
+
+  color: #b94c3e;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   ORDER GRID
+   ========================================================= */
+
+.kitchen-orders {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(370px, 1fr)
+    );
+
+  gap: 24px;
+
+  align-items: stretch;
+}
+
+/* =========================================================
+   ORDER CARD
+   ========================================================= */
+
+.kitchen-order-card {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+
+  border: 1px solid #e8e1d8;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 28px
+      rgba(58, 44, 30, 0.07);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.kitchen-order-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 38px
+      rgba(58, 44, 30, 0.12);
+}
+
+/* =========================================================
+   ORDER HEADER
+   ========================================================= */
+
+.order-card-header {
+  padding: 22px 24px 17px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-bottom: 1px solid #eee9e3;
+}
+
+.order-label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #a09487;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+}
+
+.order-card-header h2 {
+  margin: 0;
+
+  color: #27231f;
+
+  font-size: 22px;
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  overflow-wrap: anywhere;
+}
+
+.order-time {
+  flex-shrink: 0;
+
+  padding-top: 3px;
+
+  color: #99918a;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.order-status {
+  width: fit-content;
+
+  margin: 14px 24px 4px;
+
+  padding: 6px 11px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: currentColor;
+}
+
+/* New */
+
+.status-new {
+  background: #fff1e5;
+  color: #c86e1e;
+}
+
+/* Accepted */
+
+.status-accepted {
+  background: #eef2ff;
+  color: #5b67b5;
+}
+
+/* Preparing */
+
+.status-preparing {
+  background: #fff6d9;
+  color: #a77a13;
+}
+
+/* Ready */
+
+.status-ready {
+  background: #e8f7ee;
+  color: #328452;
+}
+
+/* Served */
+
+.status-served {
+  background: #eeeeee;
+  color: #77716c;
+}
+
+/* =========================================================
+   TABLE LOCATION
+   ========================================================= */
+
+.table-location {
+  margin: 14px 24px 18px;
+
+  padding: 15px 16px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fbf5eb,
+      #f6eee3
+    );
+
+  border: 1px solid #eee2d3;
+
+  border-radius: 15px;
+}
+
+.table-icon {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  font-size: 20px;
+
+  box-shadow:
+    0 3px 10px
+      rgba(60, 45, 30, 0.05);
+}
+
+.table-location span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #a08363;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+}
+
+.table-location strong {
+  display: block;
+
+  color: #302b27;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   CUSTOMER
+   ========================================================= */
+
+.customer-section {
+  margin: 0 24px 18px;
+
+  padding: 0 0 17px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  border-bottom: 1px solid #eee9e3;
+}
+
+.customer-icon {
+  width: 37px;
+  height: 37px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1efff;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+}
+
+.customer-section span {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #a19a93;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+.customer-section strong {
+  display: block;
+
+  color: #332f2b;
+
+  font-size: 15px;
+  font-weight: 750;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   ORDER ITEMS
+   ========================================================= */
+
+.order-items-section {
+  margin: 0 24px 18px;
+}
+
+.order-items-section h3 {
+  margin: 0 0 11px;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #302b27;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.order-items-list {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #eee9e3;
+
+  border-radius: 13px;
+
+  overflow: hidden;
+}
+
+.order-item {
+  min-height: 52px;
+
+  padding: 11px 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #f0ece7;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.item-details {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.item-details strong {
+  color: #39332f;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  overflow-wrap: anywhere;
+}
+
+.item-details span {
+  color: #99918a;
+
+  font-size: 11px;
+}
+
+.item-quantity {
+  flex-shrink: 0;
+
+  min-width: 38px;
+
+  padding: 5px 8px;
+
+  text-align: center;
+
+  background: #f7f3ed;
+
+  border-radius: 8px;
+
+  color: #776655;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.no-items {
+  padding: 14px;
+
+  background: #faf9f7;
+
+  border: 1px dashed #ddd6ce;
+
+  border-radius: 11px;
+
+  color: #aaa39d;
+
+  font-size: 12px;
+
+  text-align: center;
+}
+
+/* =========================================================
+   ORDER SUMMARY
+   ========================================================= */
+
+.order-summary {
+  margin: 0 24px 18px;
+
+  padding: 15px 17px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+
+  background: #faf9f7;
+
+  border: 1px solid #eee9e3;
+
+  border-radius: 15px;
+}
+
+.order-summary > div {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.order-summary span {
+  color: #89827b;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.order-summary strong {
+  color: #302b27;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  text-align: right;
+
+  overflow-wrap: anywhere;
+}
+
+.order-summary > div:first-child strong {
+  font-size: 16px;
+}
+
+/* =========================================================
+   SPECIAL INSTRUCTIONS
+   ========================================================= */
+
+.special-instructions {
+  margin: 0 24px 20px;
+
+  padding: 13px 14px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  background: #fff9f0;
+
+  border: 1px solid #f2e4d1;
+
+  border-radius: 13px;
+}
+
+.instruction-icon {
+  width: 31px;
+  height: 31px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+}
+
+.special-instructions strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #574b40;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.special-instructions p {
+  margin: 0;
+
+  color: #756b61;
+
+  font-size: 12px;
+  line-height: 1.45;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   ACTION BUTTON
+   ========================================================= */
+
+.accept-order-button {
+  width: calc(100% - 48px);
+
+  margin: auto 24px 24px;
+
+  min-height: 47px;
+
+  padding: 12px 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border: none;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f28b32,
+      #e97b20
+    );
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 16px
+      rgba(233, 123, 32, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.accept-order-button span {
+  font-size: 17px;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.accept-order-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 9px 21px
+      rgba(233, 123, 32, 0.30);
+
+  filter: brightness(1.02);
+}
+
+.accept-order-button:hover span {
+  transform: translateX(3px);
+}
+
+.accept-order-button:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   NO ORDERS
+   ========================================================= */
+
+.no-orders {
+  max-width: 620px;
+
+  margin: 80px auto;
+
+  padding: 55px 30px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e8e1d8;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 10px 30px
+      rgba(58, 44, 30, 0.07);
+}
+
+.no-orders-icon {
+  width: 72px;
+  height: 72px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #faf3e9;
+
+  border-radius: 20px;
+
+  font-size: 32px;
+}
+
+.no-orders h2 {
+  margin: 0 0 8px;
+
+  color: #302b27;
+
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.no-orders p {
+  margin: 0;
+
+  color: #918982;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.kitchen-loading {
+  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  color: #817970;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.loading-spinner {
+  width: 38px;
+  height: 38px;
+
+  border: 3px solid #eee5da;
+
+  border-top-color: #ef8530;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1450px) {
+
+  .kitchen-orders {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .kitchen-page {
+    padding: 34px 24px 50px;
+  }
+
+  .kitchen-orders {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+}
+
+/* =========================================================
+   SMALL TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .kitchen-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .kitchen-live {
+    align-self: flex-start;
+  }
+
+  .kitchen-orders {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+  .kitchen-page {
+    padding: 24px 13px 40px;
+  }
+
+  .kitchen-header {
+    margin-bottom: 25px;
+  }
+
+  .kitchen-header h1 {
+    font-size: 30px;
+  }
+
+  .kitchen-subtitle {
+    font-size: 13px;
+  }
+
+  .kitchen-order-card {
+    border-radius: 18px;
+  }
+
+  .order-card-header {
+    padding: 19px 18px 15px;
+  }
+
+  .order-card-header h2 {
+    font-size: 19px;
+  }
+
+  .order-status {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .table-location,
+  .customer-section,
+  .order-items-section,
+  .order-summary,
+  .special-instructions {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .accept-order-button {
+    width: calc(100% - 36px);
+
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-bottom: 18px;
+  }
+
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .kitchen-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .order-card-header {
+    gap: 10px;
+  }
+
+  .order-card-header h2 {
+    font-size: 17px;
+  }
+
+  .order-time {
+    font-size: 10px;
+  }
+
+}

@@ -1,0 +1,870 @@
+/* =========================================================
+   SMART RESTAURANT - LOGIN PAGE
+   Split Screen Restaurant Login
+========================================================= */
+
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   LEFT SIDE - RESTAURANT IMAGE
+========================================================= */
+
+.login-left {
+  position: relative;
+
+  width: 50%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  background-image:
+    url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1600&q=90");
+
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.login-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 12, 8, 0.94) 0%,
+      rgba(34, 18, 12, 0.86) 45%,
+      rgba(45, 24, 15, 0.72) 100%
+    );
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.restaurant-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 620px;
+
+  padding: 80px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   RESTAURANT LOGO
+========================================================= */
+
+.restaurant-logo {
+  width: 82px;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 42px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #ff9c42,
+    #ed7028
+  );
+
+  font-size: 38px;
+
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.restaurant-small-title {
+  margin-bottom: 18px;
+
+  color: #ff9b45;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   WELCOME HEADING
+========================================================= */
+
+.restaurant-content h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(45px, 5vw, 70px);
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+}
+
+.restaurant-content h1 span {
+  font-size: 0.7em;
+}
+
+
+/* =========================================================
+   LEFT SUBTITLE
+========================================================= */
+
+.restaurant-subtitle {
+  max-width: 480px;
+
+  margin: 25px 0 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 18px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.restaurant-features {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+
+  margin-top: 55px;
+}
+
+
+.feature-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+}
+
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.10);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  font-size: 21px;
+}
+
+
+.feature-item h3 {
+  margin: 0 0 4px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 700;
+}
+
+
+.feature-item p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.login-right {
+  width: 50%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px 75px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LOGIN FORM CONTAINER
+========================================================= */
+
+.login-form-container {
+  width: 100%;
+
+  max-width: 560px;
+}
+
+
+/* =========================================================
+   SIGN IN HEADING
+========================================================= */
+
+.login-heading {
+  margin-bottom: 34px;
+}
+
+
+.login-heading h2 {
+  margin: 0 0 9px;
+
+  color: #292938;
+
+  font-size: 43px;
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+
+.login-heading p {
+  margin: 0;
+
+  color: #85858b;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.section-label,
+.input-group label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #363541;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   ROLE SECTION
+========================================================= */
+
+.role-section {
+  margin-bottom: 26px;
+}
+
+
+.role-options {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   ROLE CARD
+========================================================= */
+
+.role-card {
+  position: relative;
+
+  width: 100%;
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 14px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1.5px solid #e4e0dc;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.role-card:hover {
+  border-color: #e89555;
+
+  transform: translateY(-1px);
+}
+
+
+.role-card.active {
+  border-color: #e7863e;
+
+  background: #fffaf6;
+
+  box-shadow:
+    0 5px 18px rgba(220, 116, 49, 0.08);
+}
+
+
+/* =========================================================
+   ROLE ICON
+========================================================= */
+
+.role-icon {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #f6f2ee;
+
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   ROLE TEXT
+========================================================= */
+
+.role-text {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.role-text strong {
+  color: #363541;
+
+  font-size: 14px;
+
+  font-weight: 750;
+}
+
+
+.role-text span {
+  color: #99979a;
+
+  font-size: 10px;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   ROLE CHECK
+========================================================= */
+
+.role-check {
+  position: absolute;
+
+  top: 9px;
+  right: 9px;
+
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e9813b;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   INPUT GROUP
+========================================================= */
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.input-wrapper {
+  position: relative;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   INPUT ICON
+========================================================= */
+
+.input-icon {
+  position: absolute;
+
+  left: 16px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #8e8b89;
+
+  font-size: 15px;
+
+  opacity: 0.7;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.input-wrapper input {
+  width: 100%;
+  height: 54px;
+
+  padding: 0 16px 0 46px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dedbd8;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #303038;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.input-wrapper input::placeholder {
+  color: #aaa8a8;
+}
+
+
+.input-wrapper input:hover {
+  border-color: #cbc6c1;
+}
+
+
+.input-wrapper input:focus {
+  border-color: #eb8945;
+
+  box-shadow:
+    0 0 0 3px rgba(235, 137, 69, 0.10);
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+.login-error {
+  width: 100%;
+
+  margin-bottom: 17px;
+
+  padding: 11px 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #ffd0d0;
+
+  border-radius: 9px;
+
+  background: #fff2f2;
+
+  color: #c62828;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   SIGN IN BUTTON
+========================================================= */
+
+.sign-in-button {
+  width: 100%;
+  height: 54px;
+
+  margin-top: 3px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #f2944d,
+    #e97530
+  );
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 750;
+
+  letter-spacing: 0.1px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(225, 111, 42, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.sign-in-button:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 11px 25px rgba(225, 111, 42, 0.26);
+}
+
+
+.sign-in-button:active {
+  transform: translateY(0);
+}
+
+
+.sign-in-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   CREATE ACCOUNT
+========================================================= */
+
+.create-account {
+  margin-top: 21px;
+
+  text-align: center;
+
+  color: #949294;
+
+  font-size: 13px;
+}
+
+
+.create-account a {
+  color: #df7235;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+.create-account a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   ADMIN SECTION
+========================================================= */
+
+.admin-section {
+  margin-top: 27px;
+
+  text-align: center;
+}
+
+
+.admin-line {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 12px;
+}
+
+
+.admin-line span {
+  flex: 1;
+
+  height: 1px;
+
+  background: #e8e4e1;
+}
+
+
+.admin-line p {
+  margin: 0;
+
+  color: #a4a1a0;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+}
+
+
+.admin-link {
+  color: #777474;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+
+.admin-link:hover {
+  color: #e47735;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .login-right {
+    padding: 50px 45px;
+  }
+
+  .restaurant-content {
+    padding: 60px 50px;
+  }
+
+  .restaurant-content h1 {
+    font-size: 48px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .login-page {
+    flex-direction: column;
+  }
+
+
+  .login-left {
+    width: 100%;
+
+    min-height: 430px;
+  }
+
+
+  .login-right {
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 50px 25px;
+  }
+
+
+  .restaurant-content {
+    padding: 50px 35px;
+  }
+
+
+  .restaurant-content h1 {
+    font-size: 43px;
+  }
+
+
+  .restaurant-subtitle {
+    font-size: 16px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+  .login-left {
+    min-height: 390px;
+  }
+
+
+  .restaurant-content {
+    padding: 40px 25px;
+  }
+
+
+  .restaurant-logo {
+    width: 68px;
+    height: 68px;
+
+    margin-bottom: 28px;
+
+    border-radius: 17px;
+
+    font-size: 31px;
+  }
+
+
+  .restaurant-small-title {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .restaurant-content h1 {
+    font-size: 36px;
+  }
+
+
+  .restaurant-subtitle {
+    font-size: 14px;
+  }
+
+
+  .restaurant-features {
+    display: none;
+  }
+
+
+  .login-right {
+    padding: 40px 20px;
+  }
+
+
+  .login-heading h2 {
+    font-size: 36px;
+  }
+
+
+  .role-options {
+    grid-template-columns: 1fr;
+  }
+
+}

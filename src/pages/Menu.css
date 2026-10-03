@@ -1,0 +1,380 @@
+/* =====================================================
+   MENU PAGE
+===================================================== */
+
+.menu-page {
+  min-height: 100vh;
+  padding: 35px 5% 60px;
+  background: #fffaf5;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.menu-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.menu-header h1 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 800;
+  color: #252525;
+}
+
+.menu-header p {
+  margin: 8px 0 22px;
+  color: #777;
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.menu-search {
+  width: min(520px, 90%);
+  height: 48px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  background: white;
+  border: 1px solid #eadfd5;
+  border-radius: 14px;
+
+  padding: 0 15px;
+
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.menu-search span {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.menu-search input {
+  flex: 1;
+
+  border: none;
+  outline: none;
+
+  font-size: 15px;
+  color: #333;
+
+  background: transparent;
+}
+
+.menu-search input::placeholder {
+  color: #aaa;
+}
+
+.clear-search {
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  font-size: 16px;
+  color: #999;
+}
+
+.clear-search:hover {
+  color: #e87524;
+}
+
+
+/* =====================================================
+   CATEGORY SECTION
+===================================================== */
+
+.category-section {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.category-scroll {
+  display: flex;
+  gap: 10px;
+
+  overflow-x: auto;
+
+  padding: 5px 2px 12px;
+
+  scrollbar-width: thin;
+  scrollbar-color: #e5c8b3 transparent;
+}
+
+.category-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.category-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.category-scroll::-webkit-scrollbar-thumb {
+  background: #e5c8b3;
+  border-radius: 10px;
+}
+
+
+/* =====================================================
+   CATEGORY BUTTON
+===================================================== */
+
+.category-button {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 11px 18px;
+
+  border: 1px solid #eadfd5;
+  border-radius: 30px;
+
+  background: white;
+
+  color: #555;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.category-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
+
+  color: #e87524;
+}
+
+.category-button.active {
+  background: #ff8a3d;
+
+  color: white;
+
+  border-color: #ff8a3d;
+
+  box-shadow: 0 6px 16px rgba(255, 138, 61, 0.25);
+}
+
+.category-icon {
+  font-size: 17px;
+}
+
+
+/* =====================================================
+   SELECTED CATEGORY
+===================================================== */
+
+.selected-category {
+  margin-bottom: 20px;
+}
+
+.category-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.category-heading h2 {
+  margin: 0;
+
+  font-size: 26px;
+  font-weight: 800;
+
+  color: #292929;
+}
+
+.category-heading p {
+  margin: 5px 0 0;
+
+  color: #888;
+
+  font-size: 14px;
+}
+
+.item-count {
+  flex-shrink: 0;
+
+  padding: 8px 14px;
+
+  border-radius: 20px;
+
+  background: #fff0e5;
+
+  color: #c65d17;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   FOOD GRID
+===================================================== */
+
+.food-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+
+  align-items: stretch;
+}
+
+
+/* =====================================================
+   NO FOOD
+===================================================== */
+
+.no-foods {
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: white;
+
+  border: 1px solid #eee0d5;
+
+  border-radius: 20px;
+
+  padding: 40px;
+}
+
+.no-food-icon {
+  font-size: 50px;
+
+  margin-bottom: 10px;
+}
+
+.no-foods h2 {
+  margin: 5px 0;
+
+  color: #333;
+}
+
+.no-foods p {
+  color: #888;
+
+  margin-bottom: 20px;
+}
+
+.no-foods button {
+  border: none;
+
+  padding: 11px 20px;
+
+  border-radius: 10px;
+
+  background: #ff8a3d;
+
+  color: white;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.no-foods button:hover {
+  background: #e87524;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1200px) {
+  .food-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* =====================================================
+   SMALL TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+  .menu-page {
+    padding: 30px 3% 50px;
+  }
+
+  .food-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .category-heading h2 {
+    font-size: 22px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+  .menu-page {
+    padding: 25px 15px 40px;
+  }
+
+  .menu-header h1 {
+    font-size: 30px;
+  }
+
+  .menu-header p {
+    font-size: 14px;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .category-heading {
+    align-items: flex-start;
+  }
+
+  .category-heading h2 {
+    font-size: 20px;
+  }
+
+  .category-heading p {
+    font-size: 13px;
+  }
+
+  .item-count {
+    font-size: 12px;
+    padding: 7px 11px;
+  }
+}

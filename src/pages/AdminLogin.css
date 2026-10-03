@@ -1,0 +1,601 @@
+/* =========================================================
+   SMART RESTAURANT - ADMIN LOGIN
+========================================================= */
+
+.admin-login-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.admin-login-left {
+  width: 50%;
+  min-height: 100vh;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  background-image:
+    url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1600&q=90");
+
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+
+/* Dark overlay */
+
+.admin-login-left::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(25, 15, 10, 0.95),
+      rgba(65, 32, 18, 0.82)
+    );
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.admin-brand-content {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 70px;
+
+  color: white;
+}
+
+
+.admin-logo-icon {
+  width: 82px;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 35px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #ff9a40,
+    #e97029
+  );
+
+  font-size: 38px;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+.admin-small-title {
+  margin-bottom: 15px;
+
+  color: #ff9b48;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+
+.admin-brand-content h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 55px;
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
+}
+
+
+.admin-brand-content > p {
+  max-width: 450px;
+
+  margin-top: 22px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 17px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ADMIN FEATURES
+========================================================= */
+
+.admin-features {
+  margin-top: 45px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+.admin-feature {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+
+.admin-feature-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.10);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  font-size: 20px;
+}
+
+
+.admin-feature-text strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+}
+
+
+.admin-feature-text span {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.admin-login-right {
+  width: 50%;
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px 80px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   FORM CONTAINER
+========================================================= */
+
+.admin-login-container {
+  width: 100%;
+
+  max-width: 480px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admin-login-heading {
+  margin-bottom: 35px;
+}
+
+
+.admin-login-heading h2 {
+  margin: 0 0 10px;
+
+  color: #292832;
+
+  font-size: 43px;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+
+.admin-login-heading p {
+  margin: 0;
+
+  color: #8d8a8a;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   ADMIN BADGE
+========================================================= */
+
+.admin-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 18px;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  background: #fff4eb;
+
+  color: #dc7131;
+
+  font-size: 11px;
+
+  font-weight: 750;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.admin-input-group {
+  margin-bottom: 21px;
+}
+
+
+.admin-input-group label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #373640;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.admin-input-wrapper {
+  position: relative;
+}
+
+
+.admin-input-icon {
+  position: absolute;
+
+  left: 16px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #a09d9b;
+
+  font-size: 16px;
+
+  pointer-events: none;
+}
+
+
+.admin-input-wrapper input {
+  width: 100%;
+  height: 55px;
+
+  padding: 0 16px 0 46px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #ddd9d6;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #292832;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.admin-input-wrapper input::placeholder {
+  color: #aaa7a5;
+}
+
+
+.admin-input-wrapper input:focus {
+  border-color: #e9813d;
+
+  box-shadow:
+    0 0 0 3px rgba(233, 129, 61, 0.10);
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.admin-login-error {
+  margin-bottom: 18px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #ffd0d0;
+
+  border-radius: 9px;
+
+  background: #fff2f2;
+
+  color: #c62828;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   ADMIN LOGIN BUTTON
+========================================================= */
+
+.admin-login-button {
+  width: 100%;
+  height: 55px;
+
+  margin-top: 4px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #f3944c,
+    #e87530
+  );
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 750;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(226, 111, 43, 0.18);
+
+  transition: all 0.2s ease;
+}
+
+
+.admin-login-button:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 11px 25px rgba(226, 111, 43, 0.27);
+}
+
+
+.admin-login-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   BACK TO USER LOGIN
+========================================================= */
+
+.back-to-login {
+  margin-top: 25px;
+
+  text-align: center;
+}
+
+
+.back-to-login a {
+  color: #777474;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+
+.back-to-login a:hover {
+  color: #e47735;
+}
+
+
+/* =========================================================
+   SECURITY NOTE
+========================================================= */
+
+.admin-security-note {
+  margin-top: 30px;
+
+  padding: 13px 15px;
+
+  border-radius: 10px;
+
+  background: #faf8f6;
+
+  border: 1px solid #eee9e5;
+
+  color: #898582;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .admin-login-right {
+    padding: 45px;
+  }
+
+  .admin-brand-content {
+    padding: 50px;
+  }
+
+  .admin-brand-content h1 {
+    font-size: 45px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+  .admin-login-page {
+    flex-direction: column;
+  }
+
+  .admin-login-left {
+    width: 100%;
+    min-height: 360px;
+  }
+
+  .admin-login-right {
+    width: 100%;
+    min-height: auto;
+
+    padding: 45px 25px;
+  }
+
+  .admin-brand-content {
+    padding: 45px 30px;
+  }
+
+  .admin-brand-content h1 {
+    font-size: 38px;
+  }
+
+  .admin-features {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .admin-login-left {
+    min-height: 300px;
+  }
+
+  .admin-brand-content {
+    padding: 35px 25px;
+  }
+
+  .admin-logo-icon {
+    width: 65px;
+    height: 65px;
+
+    margin-bottom: 25px;
+
+    font-size: 30px;
+  }
+
+  .admin-brand-content h1 {
+    font-size: 32px;
+  }
+
+  .admin-brand-content > p {
+    font-size: 14px;
+  }
+
+  .admin-login-right {
+    padding: 35px 20px;
+  }
+
+  .admin-login-heading h2 {
+    font-size: 36px;
+  }
+
+}

@@ -1,0 +1,621 @@
+/* =========================================================
+   SMART RESTAURANT NAVBAR
+========================================================= */
+
+.navbar {
+  width: 100%;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 42px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #eeeeee;
+
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+
+  position: relative;
+  z-index: 1000;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-logo {
+  flex: 1;
+}
+
+.navbar-logo a {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  text-decoration: none;
+
+  color: inherit;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #ff9638,
+    #ed7625
+  );
+
+  font-size: 24px;
+
+  box-shadow:
+    0 6px 15px rgba(237, 118, 37, 0.18);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.logo-text strong {
+  color: #242431;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.logo-text span {
+  color: #999999;
+
+  font-size: 10px;
+
+  letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   CENTER NAVIGATION
+========================================================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 34px;
+
+  height: 100%;
+}
+
+.nav-link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+
+  color: #3d3b43;
+
+  font-size: 14px;
+
+  font-weight: 650;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #e97832;
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 16px;
+
+  width: 0;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  border-radius: 5px;
+
+  background: #ed7c38;
+
+  transition: width 0.2s ease;
+}
+
+.nav-link:hover::after {
+  width: 22px;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.navbar-right {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+.cart-link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 10px 13px;
+
+  color: #3d3b43;
+
+  font-size: 14px;
+
+  font-weight: 650;
+
+  text-decoration: none;
+
+  border-radius: 10px;
+
+  transition: all 0.2s ease;
+}
+
+.cart-link:hover {
+  color: #e97832;
+
+  background: #fff7f1;
+}
+
+.cart-count {
+  position: absolute;
+
+  top: 1px;
+  right: 1px;
+
+  min-width: 18px;
+  height: 18px;
+
+  padding: 0 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  background: #ed7b36;
+
+  color: white;
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   NOT LOGGED IN
+   LOGIN + SIGN UP SIDE BY SIDE
+========================================================= */
+
+.navbar-auth {
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 11px;
+
+  white-space: nowrap;
+}
+
+
+/* LOGIN BUTTON */
+
+.login-nav-button {
+  height: 44px;
+
+  padding: 0 20px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e3ddd8;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #35343c;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+
+.login-nav-button:hover {
+  border-color: #e88743;
+
+  color: #e47732;
+
+  background: #fffaf6;
+}
+
+
+/* SIGN UP BUTTON */
+
+.signup-nav-button {
+  height: 44px;
+
+  padding: 0 22px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #ff963d,
+    #ed7628
+  );
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 750;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 6px 16px rgba(237, 118, 40, 0.20);
+
+  transition: all 0.2s ease;
+}
+
+.signup-nav-button:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 9px 20px rgba(237, 118, 40, 0.28);
+}
+
+
+/* =========================================================
+   LOGGED-IN USER
+========================================================= */
+
+.navbar-user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 6px 7px 6px 9px;
+
+  background: #fffaf6;
+
+  border: 1px solid #f1e3d8;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 15px rgba(60, 40, 25, 0.05);
+}
+
+
+/* =========================================================
+   USER AVATAR
+========================================================= */
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #ff963d,
+    #e8752c
+  );
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 4px 10px rgba(230, 112, 42, 0.18);
+}
+
+
+/* =========================================================
+   USER INFORMATION
+========================================================= */
+
+.user-info {
+  min-width: 75px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 2px;
+}
+
+.welcome-text {
+  color: #99918c;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+}
+
+.user-info strong {
+  max-width: 130px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  color: #292832;
+
+  font-size: 13px;
+
+  font-weight: 750;
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.logout-button {
+  height: 34px;
+
+  padding: 0 13px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #fff0e8;
+
+  color: #d6652d;
+
+  font-size: 11px;
+
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+  background: #ffe2d3;
+
+  color: #bd5120;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .navbar {
+    padding: 0 25px;
+  }
+
+  .navbar-links {
+    gap: 22px;
+  }
+
+  .navbar-right {
+    gap: 10px;
+  }
+
+  .user-info {
+    min-width: 60px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .navbar {
+    padding: 0 18px;
+  }
+
+  .navbar-links {
+    gap: 15px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+
+  .logo-text strong {
+    font-size: 15px;
+  }
+
+  .logo-text span {
+    display: none;
+  }
+
+  .user-info {
+    display: none;
+  }
+
+  .navbar-user {
+    gap: 7px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .navbar {
+    height: auto;
+
+    min-height: 75px;
+
+    padding: 12px 15px;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+  }
+
+  .navbar-logo {
+    flex: none;
+  }
+
+  .navbar-links {
+    order: 3;
+
+    width: 100%;
+
+    height: 40px;
+
+    justify-content: center;
+
+    gap: 22px;
+
+    border-top: 1px solid #f2eeee;
+  }
+
+  .nav-link {
+    height: 40px;
+  }
+
+  .nav-link::after {
+    bottom: 3px;
+  }
+
+  .navbar-right {
+    flex: 1;
+  }
+
+  .navbar-auth {
+    gap: 7px;
+  }
+
+  .login-nav-button,
+  .signup-nav-button {
+    height: 39px;
+
+    padding: 0 13px;
+
+    font-size: 11px;
+  }
+
+  .cart-link {
+    padding: 7px;
+  }
+
+  .cart-link {
+    font-size: 0;
+  }
+
+  .cart-link::before {
+    content: "🛒";
+
+    font-size: 18px;
+  }
+
+  .user-avatar {
+    width: 36px;
+    height: 36px;
+  }
+
+  .logout-button {
+    height: 32px;
+
+    padding: 0 10px;
+
+    font-size: 10px;
+  }
+
+}
